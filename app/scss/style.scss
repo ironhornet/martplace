@@ -1,0 +1,19 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+.box{
+    text-align: inherit;
+}
+
+body{
+    background-color: red;
+
+}
+.box{
+    display: flex;
+}
