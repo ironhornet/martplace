@@ -1,19 +1,365 @@
-html{
-    box-sizing: border-box;
-}
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
-}
-.box{
-    text-align: inherit;
-}
+@import 'vars';
+@import 'global';
+@import 'fonts';
 
-body{
-    background-color: red;
 
-}
-.box{
+// stard header 
+.header__top-inner{
     display: flex;
+    align-items: center;
+    height: 100px;
 }
+.header__top{
+    background-color: $bg-gr;
+    
+}
+
+
+.header-logo{
+    padding-left: 7px;
+}
+.header__logo-text{
+    display: inline-block;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-left: 6px;
+    span{
+        color: #0674ec;
+    }
+    }
+
+
+.header__btn-become{
+    a{
+        color: #fff;
+    }
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    width: 140px;
+    height: 36px;
+    background-color: #0674ec;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.menu{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    justify-content: space-between;
+}
+.header__menu-list{
+    
+    li{
+        display: inline-block;
+        text-transform: uppercase;
+        color: #333333;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        padding-right: 34px;
+
+    }
+}
+
+.header__search-form{
+    width: 360px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    position: relative;
+    input{
+        width: 100%;
+        height: 46px;
+        border-radius: 23px;
+        border-color: #d9dfe5;
+        border-style: solid;
+        &::placeholder{
+            color: #898f96;
+            padding-left: 25px;
+        }
+    }
+    button{
+        height: 46px;
+        width: 70px;
+        border-radius: 23px;
+        border: none;
+        background-color: #0674ec;
+        position: absolute;
+        right: 0px;
+    }
+}
+
+// end header 
+
+// start search 
+.search{
+    background-color: #274acd;
+    height: 729px;
+}
+
+.search__inner{
+    position: relative;
+    height: 100%;
+    &-wrap{
+    text-align: center;
+    color: #f3f3f8;
+    font-family: 'Quicksand', sans-serif;
+    }
+   
+   &-title{ 
+       font-weight: 400;
+       font-size: 60px; 
+       padding: 184px 0 40px 0;
+   }
+   span{
+       font-weight: 700;
+   }
+   &-text{
+       font-size: 20px;
+       font-weight: 500;
+       padding-bottom: 70px;
+       
+   }
+   &-buttons{
+       button:hover{
+               background-color: #fff;
+               color: #274acd;
+       }
+       button + button{
+           margin-left: 30px;
+       }
+       button{
+       border-radius: 27px;
+       width: 190px;
+       height: 55px;
+       font-weight: 400;
+       color: #f3f3f8;
+       font-family: 'Quicksand', sans-serif;
+       border: 1px solid #fff;
+       background-color: transparent;
+       transition: all .5; // it is not working 
+
+   }
+   }
+}
+.container-search{
+    height: 100%;
+}
+.search__blocks{
+    position: absolute;
+    height: 164px;
+    width: 1140px;
+    display: flex;
+    justify-content: center;
+    bottom: -67px;
+    .invisible{
+    height: 135px;
+    border-radius: 6px;
+    background-color: #fff;
+    height: 135px;
+    position: absolute;
+    opacity: 0.5;
+    }
+    &-first{
+        width: 1080px; 
+        top: 0;
+    }
+    &-second{
+        width: 1110px;
+        top: 14px;
+    }
+    &-form{
+        position: absolute;
+        bottom: 0;
+        width: 1140px;
+        height: 135px;
+        background-color: #fff;
+        border-radius: 6px;
+        position: absolute;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .search-form{
+        height: 55px;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 400;
+        border: 1px solid #dcdcdc;
+        
+        }
+        form{
+            display: flex;
+            justify-content: center;
+        }
+        input{
+            padding-left: 30px;
+            width: 614px;
+            border-radius: 6px 0 0 6px;
+            border-right-style: none;
+            
+        }
+        select{
+            padding-right: 72px;
+            padding-left: 20px;
+            border-left-style: none;
+            border-radius: 0px 6px 6px 0;
+            appearance: none;
+            background-image: url(../images/icons/drop-down.png);
+            background-repeat: no-repeat;
+            background-position: right 20px bottom 23px;
+            right: 25px;
+
+        }
+        
+        button{
+            color: #fff;
+            background-color: #0674ec;
+            margin-left: 30px;
+            width: 223px;
+            border-radius: 6px;
+        }
+    }
+}
+ 
+// end search 
+
+//start adventages
+.adventages__item-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.adventages__item{
+    width: calc((100% -60px ) / 3);
+    margin: 185px 0 120px;
+    text-align: center;
+    background-color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    img{
+        margin-top: 28px;
+    }
+    &-title{
+        font-size: 24px;
+        margin: 35px 0 30px 0;
+
+    }
+    &-text{
+        line-height: 30px;
+        font-size: 16px;
+        margin: 0 34px 68px;
+    }
+}
+.adventages__item:hover{
+box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.08);
+z-index: 2;
+}
+//end adventages
+
+//start product slider
+.product__slider{
+    background-color: #eff1f5;
+    padding-top: 120px;
+    &-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include f400;
+        font-size: 30px;
+        width: 100%;
+        height: 110px;
+        border-radius: 4px;
+        background-color: #fff;
+        box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+        padding: 0 30px;
+        margin: 0 0 50px;
+    }
+    &-arrows{
+        background-color: #7347c1;
+        width: 110px;
+        height: 45px;
+        border-radius: 22.5px;
+    }
+    &-item{
+        background-color: #fff;
+        // display: flex;
+        // justify-content: center; Почему то пришлось вынести этот клас и писать отдельно . флекс не работал ( не хватало приоритетности ? Как узнать ее уровень?)
+    }
+}
+.product-slider__item{
+    display: flex;
+    justify-content: center;
+}
+.product__item{
+    &-content{
+        @include f400;
+        padding-left: 50px;
+        padding-right: 60px;
+        background-color: #fff;
+    }
+    &-title{
+        @include f500;
+        font-size: 24px;
+        margin: 50px 0 20px ; ;
+    }
+    &-text{
+        line-height: 30px;
+        font-size: 16px;
+    }
+    &-author{
+        display:flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 35px;
+        p{      
+        font-size: 15px;
+        color: black;
+        margin: 0 20px 0 10px;
+        }
+        }
+        &-cms{
+            color: #7347c1;
+            font-size: 15px;
+        }
+    
+    &-caregories{
+        display: flex;
+        margin-top: 42px;
+        border-bottom: 1px solid #ececec;
+        padding-bottom: 44px;
+    }
+    &-rate{
+        display: flex;
+        margin-top: 22px;
+        &-price{
+            @include f500;
+            line-height: 32px;
+            color: #fff;
+            background-color: #0674ec;
+            padding: 0 19px;
+            border-radius: 16px;
+        }
+    }
+    
+}
+.category{
+    // width: 100%;
+    text-align: center;
+    line-height: 9px;
+    height: 28px;
+    padding: 9px 14px;
+    border-radius: 14px;
+    background-color: #f1f3f6;
+    color: #868c96;
+}
+.category + .category{
+    margin-left: 8px;
+}
+
+//end product slider
+
+  

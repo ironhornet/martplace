@@ -1,0 +1,13 @@
+$bg-gr: #eef1f3;
+
+
+
+@mixin f400 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+@mixin f500 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
