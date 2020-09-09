@@ -272,7 +272,7 @@ z-index: 2;
         font-size: 30px;
         width: 100%;
         height: 110px;
-        border-radius: 4px;
+        // border-radius: 4px;
         background-color: #fff;
         box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
         padding: 0 30px;
@@ -283,23 +283,41 @@ z-index: 2;
         width: 110px;
         height: 45px;
         border-radius: 22.5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // display: inline-block!important;
     }
     &-item{
-        background-color: #fff;
-        // display: flex;
-        // justify-content: center; Почему то пришлось вынести этот клас и писать отдельно . флекс не работал ( не хватало приоритетности ? Как узнать ее уровень?)
+        display: flex!important;
+        justify-content: center;
     }
 }
-.product-slider__item{
-    display: flex;
-    justify-content: center;
+.l-r__arrow{
+    display: inline-block;
+    position: relative;
+    top: -3px;
 }
+.prev-arrow{
+    right: 25px;
+}
+.next-arrow{
+    left: 25px;
+}
+// .product-slider__item{
+//     display: flex;
+//     justify-content: center;
+// }
+
 .product__item{
     &-content{
         @include f400;
         padding-left: 50px;
         padding-right: 60px;
+        padding-bottom: 32px;
         background-color: #fff;
+        border-bottom-right-radius: 4px;
+        border-top-right-radius: 4px;
     }
     &-title{
         @include f500;
@@ -320,29 +338,25 @@ z-index: 2;
         color: black;
         margin: 0 20px 0 10px;
         }
-        }
+    
         &-cms{
             color: #7347c1;
             font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                display: inline-block;
+                padding-right: 10px;
+            }
         }
+    }
     
     &-caregories{
         display: flex;
         margin-top: 42px;
         border-bottom: 1px solid #ececec;
         padding-bottom: 44px;
-    }
-    &-rate{
-        display: flex;
-        margin-top: 22px;
-        &-price{
-            @include f500;
-            line-height: 32px;
-            color: #fff;
-            background-color: #0674ec;
-            padding: 0 19px;
-            border-radius: 16px;
-        }
     }
     
 }
@@ -360,6 +374,47 @@ z-index: 2;
     margin-left: 8px;
 }
 
+.product__item-rate{
+    @include f500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 22px;
+        &-numbers {
+            display: flex;
+            align-items: center;
+            &-price{
+                line-height: 32px;
+                color: #fff;
+                background-color: #0674ec;
+                padding: 0 19px;
+                border-radius: 16px;
+            }
+            &-likes{
+                text-align: center;
+                @include f400;
+                display: flex;
+                align-items: center;
+                font-size: 15px;
+                margin: 0 20px;
+                span{
+                    margin-left: 9px;
+                }
+            }
+            &-bought{
+                @include f400;
+                display: flex;
+                align-items: center;
+                font-size: 15px;
+                span{
+                    margin-left: 9px;
+                }
+            }
+        }
+    }
+    // .product-slider__inner{
+    //     // border-radius: 10px!important;
+    // }
 //end product slider
 
   
