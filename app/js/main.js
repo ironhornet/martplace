@@ -16,7 +16,7 @@ $(function(){
           starWidth: "15px",
           readOnly: true
         });
-       
-      
+
+        var mixer = mixitup('.plugins__inner');
 
 });
