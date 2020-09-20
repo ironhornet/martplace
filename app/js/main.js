@@ -9,6 +9,17 @@ $(function(){
 
       });
 
+      $('.second__product-slider-inner').slick({
+        prevArrow: ('.prev-arrow-2'),
+        nextArrow: ('.next-arrow-2'),
+        dots: false,
+        arrows: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        // variableWidth: true
+
+      });
+
  
         $(".product__item-rate-ct-star").rateYo({
           rating: 4.5,
