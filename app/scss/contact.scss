@@ -6,9 +6,9 @@
   opacity: 0.9;
   color: #f3f3f8;
   font-family: 'Quicksand', sans-serif;
+  text-align: center;
 
   h2 {
-    text-align: center;
     font-size: 30px;
     font-weight: 500;
     margin: 0 0 30px;
@@ -16,16 +16,15 @@
   p {
     font-size: 20px;
     font-weight: 400;
-    text-align: center;
   }
 }
 
 .help {
   padding: 120px 0;
   background-color: #eff1f5;
+  text-align: center;
 
   h2 {
-    text-align: center;
     color: #000000;
     font-family: 'Quicksand', sans-serif;
     font-size: 36px;
@@ -42,7 +41,6 @@
   .description {
     width: 59%;
     margin: 0 auto 62px;
-    text-align: center;
     color: #555555;
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
@@ -64,20 +62,19 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      text-align: center;
 
       h3 {
         color: #000000;
         font-family: 'Quicksand', sans-serif;
         font-size: 20px;
         font-weight: 500;
-        text-align: center;
         margin: 0 0 40px;
       }
       p {
         color: #555555;
         font-family: 'Quicksand', sans-serif;
         font-size: 16px;
-        text-align: center;
       }
     }
   }
